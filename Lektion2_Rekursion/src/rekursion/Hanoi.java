@@ -34,7 +34,8 @@ public class Hanoi {
 	}
 	public static void main(String[] args) {
 			flyt(5,1,3);
-		System.out.println(findFlytninger(56));
+		System.out.println(findFlytninger(40
+		));
 	}
 	//
 }
