@@ -28,7 +28,7 @@ public class Skole {
     }
 
     public void removeStuderende(Studerende studerende) {
-        studerendes.remove(studerende);
+        studerendes.remove(studerende.getStudieNr());
     }
 
     public double gennemsnit() {
