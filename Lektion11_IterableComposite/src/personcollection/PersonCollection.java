@@ -1,6 +1,8 @@
 package personcollection;
 
-public class PersonCollection {
+import java.util.Iterator;
+
+public class PersonCollection implements Iterable<Person>{
     // array to store the persons in;
     // persons have indices in [0, size-1]
     private Person[] persons;
@@ -137,10 +139,35 @@ public class PersonCollection {
         sb.delete(1, 3);
         return sb.toString();
     }
+    @Override
+    public Iterator<Person> iterator(){
+        return new PersonCollectionIterator(persons);
+    }
+
+
 
     // -------------------------------------------------------------------------
     // Ex. 2
 
-    // TODO
+    private class PersonCollectionIterator implements Iterator<Person>{
+        private int position;
+        private Person[] persons;
+        public PersonCollectionIterator(Person[] persons){
+            this.persons = persons;
+            position = 0;
+        }
 
+        @Override
+        public boolean hasNext(){
+            return position < persons.length && persons[position] != null;
+        }
+
+        @Override
+        public Person next(){
+            Person person = persons[position];
+            position++;
+            return person;
+        }
+
+    }
 }
