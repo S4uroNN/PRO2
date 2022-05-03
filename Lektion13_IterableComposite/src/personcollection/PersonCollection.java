@@ -11,14 +11,14 @@ public class PersonCollection implements Iterable<Person>{
     private int size;
 
     /**
-     * Creates an Collection with capacity 16.
+     * Creates a Collection with capacity 16.
      */
     public PersonCollection() {
         this(16);
     }
 
     /**
-     * Creates an Collection. Requires: capacity >= 1.
+     * Creates a Collection. Requires: capacity >= 1.
      */
     public PersonCollection(int capacity) {
 
@@ -167,6 +167,8 @@ public class PersonCollection implements Iterable<Person>{
             Person person = persons[position];
             position++;
             return person;
+
+
         }
 
     }

@@ -1,4 +1,4 @@
-package eksempel;
+package eksempel1sem;
 
 public class EksempelRekursiveMetoder {
 
