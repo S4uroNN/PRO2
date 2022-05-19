@@ -1,17 +1,18 @@
 package queueopgaver;
 
-public class DobbelKædeDQ implements DequeI{
+public class DobbelKædeDQ implements DequeI {
 
     private int size;
     private Node first;
     private Node last;
 
-    public DobbelKædeDQ(){
+    public DobbelKædeDQ() {
         size = 0;
         first = null;
         last = null;
 
     }
+
     @Override
     public boolean isEmpty() {
         return size == 0;
@@ -21,10 +22,10 @@ public class DobbelKædeDQ implements DequeI{
     public void addFirst(Object newElement) {
         Node newNode = new Node();
         newNode.data = newElement;
-        if(first == null){
+        if (first == null) {
             first = newNode;
             last = newNode;
-        }else{
+        } else {
             newNode.next = first;
             first.prev = newNode;
             first = newNode;
@@ -39,22 +40,23 @@ public class DobbelKædeDQ implements DequeI{
         if (first == null) {
             first = newNode;
             last = newNode;
-        } else{
+        } else {
             newNode.prev = last;
             last.next = newNode;
-            last= newNode;
+            last = newNode;
         }
+        size++;
     }
 
 
     @Override
     public Object removeFirst() {
         Object removed = null;
-        if(first != null){
+        if (first != null) {
             removed = first.data;
             first = first.next;
             size--;
-            if (isEmpty()){
+            if (isEmpty()) {
                 last = null;
             }
         }
@@ -64,11 +66,11 @@ public class DobbelKædeDQ implements DequeI{
     @Override
     public Object removeLast() {
         Object removed = null;
-        if(last != null){
+        if (last != null) {
             removed = last.data;
             last = last.prev;
             size--;
-            if (isEmpty()){
+            if (isEmpty()) {
                 first = null;
             }
         }

@@ -65,7 +65,10 @@ public class ArrayQueue implements QueueI {
 	 */
 	@Override
 	public Object getFront() {
-		return queue[0];
+		if (size != 0) {
+			return queue[0];
+		}
+		return "This is empty";
 	}
 
 	/**

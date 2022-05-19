@@ -13,7 +13,7 @@ public class CirkulærListe{
         newNode.data = person;
         if(position == null){
             position = newNode;
-            newNode.next = position;
+            position.next = position;
             size++;
         }else{
             position.next = newNode;
