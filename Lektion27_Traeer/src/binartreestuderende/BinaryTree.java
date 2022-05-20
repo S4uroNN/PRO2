@@ -188,9 +188,9 @@ public class BinaryTree<E> {
 	}
 	private int sum(Node n){
 		int sum = 0;
-		if(n.data != null){
-			sum += sum(n.left) + sum(n.right);
-		}else{
+		if (n == null){
+			sum = 0;
+		}else {
 			sum = 0;
 		}
 		return sum;

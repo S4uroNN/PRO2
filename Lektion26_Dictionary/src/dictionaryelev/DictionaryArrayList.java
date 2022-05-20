@@ -56,7 +56,7 @@ public class DictionaryArrayList<K, V> implements Dictionary<K, V> {
     }
 
     @Override
-    public V remove(K key) { //Fik en ConcurrencyModificationException.
+    public V remove(K key) {
         V old = null;
         Item toremove = null;
         boolean found = false;
