@@ -186,14 +186,12 @@ public class BinaryTree<E> {
 	public int sum(){
 		return sum(root);
 	}
-	private int sum(Node n){
-		int sum = 0;
-		if (n == null){
-			sum = 0;
-		}else {
-			sum = 0;
+	private int sum(Node n) {
+		if (n == null) {
+			return 0;
+		} else {
+			return sum(n.left) + sum(n.right) + (Integer) n.data;
 		}
-		return sum;
 	}
 
 
