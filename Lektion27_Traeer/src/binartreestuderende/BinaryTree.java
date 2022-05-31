@@ -116,11 +116,6 @@ public class BinaryTree<E> {
 	 * @return true in n has at least one child
 	 */
 	private boolean isInternal(Node n) {
-//		if(n.left != null || n.right != null) {
-//			return true;
-//		}else {
-//			return false;
-//		}
 		return n.left != null || n.right != null;
 	}
 
@@ -172,7 +167,7 @@ public class BinaryTree<E> {
 		if(root != null){
 			left().inorder();
 			System.out.println(root.data);
-			right().preorder();
+			right().inorder();
 		}
 	}
 	public void postorder(){

@@ -6,14 +6,14 @@ public class App {
         BinaryTree<Integer> twentyfive = new BinaryTree<Integer>(25);
         BinaryTree<Integer> eighteight = new BinaryTree<Integer>(88);
 
-        BinaryTree<Integer> eleven = new BinaryTree<Integer>(11,null, fifteen);
-        BinaryTree<Integer> thirty = new BinaryTree<Integer>(30,twentyfive, null);
-        BinaryTree<Integer> ninety = new BinaryTree<Integer>(90,eighteight, null);
+        BinaryTree<Integer> eleven = new BinaryTree<Integer>(11, null, fifteen);
+        BinaryTree<Integer> thirty = new BinaryTree<Integer>(30, twentyfive, null);
+        BinaryTree<Integer> ninety = new BinaryTree<Integer>(90, eighteight, null);
 
-        BinaryTree<Integer> twotwo = new BinaryTree<Integer>(22,eleven, thirty);
-        BinaryTree<Integer> sevenseven = new BinaryTree<Integer>(77,null, ninety);
+        BinaryTree<Integer> twotwo = new BinaryTree<Integer>(22, eleven, thirty);
+        BinaryTree<Integer> sevenseven = new BinaryTree<Integer>(77, null, ninety);
 
-        BinaryTree<Integer> fourfive = new BinaryTree<Integer>(45,twotwo,sevenseven);
+        BinaryTree<Integer> fourfive = new BinaryTree<Integer>(45, twotwo, sevenseven);
 
 
         System.out.println(fourfive.height());
