@@ -23,6 +23,7 @@ public class App {
         System.out.println(tree.removeMax());
         System.out.println(tree.removeMax());
         tree.print();
+        System.out.println("DAOS ramnøgle");
         System.out.println();
         System.out.println("Proces 1");
         System.out.println("Offset " + 1570 % 512);

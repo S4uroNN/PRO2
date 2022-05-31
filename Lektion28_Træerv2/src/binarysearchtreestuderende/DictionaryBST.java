@@ -48,9 +48,10 @@ Dictionary<K, V> {
 	@Override
 	public V put(K key, V value) {
 		V old = null;
-		if(find(key) != null){
-			old = find(key).value;
-			find(key).value = value;
+		Node temp = find(key);
+		if(temp != null){
+			old = temp.value;
+			temp.value = value;
 		}else{
 			Node newNode = new Node(key,value);
 			root.addNode(newNode);
